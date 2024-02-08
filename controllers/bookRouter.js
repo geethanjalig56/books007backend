@@ -14,4 +14,10 @@ router.get("/view", async(req,res)=>{
     res.json(data)
 })
 
+router.post("/src",async(req,res)=>{
+    let input = req.body
+    let data = await bookmodel007.find(input)
+    res.json(data)
+})
+
 module.exports = router
